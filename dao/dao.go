@@ -1,24 +1,18 @@
-package main
+package dao
 
 import (
 	"database/sql"
-	"fmt"
+	_ "github.com/go-sql-driver/mysql"
 )
 
-var DB *sql.DB
+var dB *sql.DB
+//连接服务器
 
-func MysqlInit() *sql.DB {
-	db, err := sql.Open("mysql", "root:syouZX@tcp(127.0.0.1:3306)/messageBoard?charset=utf8")
+func InitDB() {
+	db, err := sql.Open("mysql", "root:123456@tcp(localhost:3306)/test-b-g?charset=utf8mb4&parseTime=True")
 	if err != nil {
-		fmt.Printf("mysql connect failed:%v", err)
-		return nil
+		panic(err)
 	}
-	db.SetMaxOpenConns(1000)
-	err = db.Ping()
-	if err != nil {
-		fmt.Printf("mysql connect failed:%v", err)
-		return nil
-	}
-	DB = db
-	return DB
+
+	dB = db
 }

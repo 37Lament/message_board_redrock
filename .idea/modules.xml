@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/message_board_redrock.iml" filepath="$PROJECT_DIR$/.idea/message_board_redrock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/message-board.iml" filepath="$PROJECT_DIR$/.idea/message-board.iml" />
     </modules>
   </component>
 </project>
